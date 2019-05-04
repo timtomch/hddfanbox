@@ -5,9 +5,11 @@ $fn=50;
 
 use <roundedcube.scad>
 
+union(){
 // Main frame
 difference() {
-    roundedcube([69,68,25],false,1,"z");
+    //roundedcube([69,68,25],false,1,"z");
+    cube([69,68,25]);
     translate([4.5,4,-1]){
         cube([60,60,27]);
     }
@@ -58,18 +60,18 @@ difference() {
 
 
 
-// Bottom tabs
-translate([5,-7,10]){
-    roundedcube([1,9,10],false,0.5,"x");
-}
+    // Bottom tabs
+    translate([5,-7,10]){
+        roundedcube([1,9,10],false,0.5,"x");
+    }
 
-translate([63,-7,10]){
-    roundedcube([1,9,10],false,0.5,"x");
-}
+    translate([63,-7,10]){
+        roundedcube([1,9,10],false,0.5,"x");
+    }
 
-translate([27,-7,6]){
-    roundedcube([15,9,1],false,0.5,"z");
-}
+    translate([27,-7,6]){
+        roundedcube([15,9,1],false,0.5,"z");
+    }
 
 // Top tabs
 difference(){
@@ -121,4 +123,4 @@ difference(){
     }
 
 
-
+}
